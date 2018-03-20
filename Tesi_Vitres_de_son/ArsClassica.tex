@@ -1,14 +1,23 @@
-% !TEX TS-program = pdflatex
-% !TEX root = ArsClassica.tex
+%!TEX TS-program = pdflatex
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = ArsClassica.tex
 
-\documentclass[a4paper,titlepage,
-               headinclude,,footinclude,BCOR5mm,
-               numbers=noenddot,cleardoublepage=empty,
-               tablecaptionabove]{scrreprt}
-               
+\documentclass[a4paper,
+		       titlepage,
+               headinclude,
+               footinclude,
+               BCOR5mm,
+               numbers=noenddot,
+               cleardoublepage=empty,
+               tablecaptionabove
+               ]{scrreprt}
+
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+
+\usepackage[english,
+            italian
+            ]{babel}
+            
 \usepackage{amsmath,amssymb}
 \usepackage{indentfirst}
 \usepackage[style=philosophy-modern,hyperref]{biblatex}
@@ -32,17 +41,17 @@
 \input{FrontBackMatter/Titleback}
 \cleardoublepage
 \input{FrontBackMatter/Introduzione}
-\pagestyle{scrheadings} 
+\pagestyle{scrheadings}
 \input{FrontBackMatter/Contents}
 \cleardoublepage
 \pagenumbering{arabic}
-\input{Chapters/01_Sinossi}
-\input{Chapters/02_L'opera Sp.I.R.E}
-\input{Chapters/03_La Performance}
-\input{Chapters/04_La Composizione}
-\input{Chapters/05_La ricerca dei materiali (elettromeccanici)}
-\input{Chapters/06_Sistema di diffusione}
-\input{Chapters/07_Riflessioni e conclusioni}
+%\input{Chapters/01-sinossi}
+%\input{Chapters/02-spire}
+%\input{Chapters/03-performance}
+%\input{Chapters/04-composizione}
+%\input{Chapters/05-materiali}
+%\input{Chapters/06-diffusione}
+%\input{Chapters/07-conclusioni}
 \clearpage
 \input{FrontBackMatter/Bibliography}
 \end{document}
