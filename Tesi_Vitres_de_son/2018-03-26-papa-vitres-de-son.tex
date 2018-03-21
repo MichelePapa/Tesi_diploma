@@ -9,7 +9,9 @@
                BCOR5mm,
                numbers=noenddot,
                cleardoublepage=empty,
-               tablecaptionabove
+               tablecaptionabove,
+               twoside,
+               openright
                ]{scrreprt}
 
 \usepackage[T1]{fontenc}
@@ -19,12 +21,14 @@
             italian
             ]{babel}
             
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath,
+		    amssymb}
 
 \usepackage{indentfirst}
 
 \usepackage[style=philosophy-modern,
-            hyperref]{biblatex}
+            hyperref
+            ]{biblatex}
 
 \usepackage{chngpage}
 
@@ -42,7 +46,14 @@
 
 \usepackage{pifont}
 
-\usepackage[eulerchapternumbers,subfig,beramono,eulermath,pdfspacing,listings]{classicthesis}
+\usepackage[eulerchapternumbers,
+            subfig,
+            beramono,
+            eulermath,
+            pdfspacing,
+            listings,
+            dottedtoc
+            ]{classicthesis}
 
 \usepackage{arsclassica}
 
@@ -58,6 +69,8 @@
 
 \usepackage{epsfig}
 
+\linespread{1.1}
+
 %-----------------------------------------------------------------------
 %----------------------------------------------------------- documento -
 %-----------------------------------------------------------------------
@@ -72,13 +85,13 @@
 
 \cleardoublepage
 
-\input{FrontBackMatter/Introduzione}
-
 \pagestyle{scrheadings}
 
 \input{FrontBackMatter/Contents}
 
 \cleardoublepage
+
+\input{FrontBackMatter/Introduzione}
 
 \pagenumbering{arabic}
 
