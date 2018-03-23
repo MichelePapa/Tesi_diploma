@@ -25,7 +25,7 @@ un tourbillon d'ailes sauvages \\
 torrentielles d'obscénités.\\
 \end{quotation}
 
-La struttura complessiva del brano è tripartita. Ogni parte è costruita su una quartina della poesia. I righi della partitura  si differenziano per piccoli tratti gestuali: ogni figura ha l'unione di uno o più timbri. In questo esempio, vediamo un pizzicato, dato dal simbolo triangolare\footnote{tutti i simboli verrano esplicati nella sezione dedicata alla legenda} e un glissato sulla molla, che produce uno strofinio (fig ...). L'insieme di più tecniche per delineare un timbro complesso è una teoria sostenuta dal compositore Simone Santi Gubini durante la sua masterclass tenutasi al Santa Cecilia durante \textit{EMUFest 2017}. L'utilizzo di più tecniche sovrapposte, come in figura ..., rende possibile un'assimilazione veloce del gesto e una chiarezza di linguaggio. Così ho sfruttato tali insegnamenti per provare a sommare più simboli per arrivare ad un timbro complesso.
+La struttura complessiva del brano è tripartita. Ogni parte è costruita su una quartina della poesia. I righi della partitura si differenziano per piccoli tratti gestuali: ogni figura ha l'unione di uno o più timbri. In questo esempio, vediamo un pizzicato, dato dal simbolo triangolare\footnote{tutti i simboli verrano esplicati nella sezione dedicata alla legenda} e un glissato sulla molla, che produce uno strofinio (fig ). L'insieme di più tecniche per delineare un timbro complesso è una teoria sostenuta dal compositore Simone Santi Gubini durante la sua masterclass tenutasi al Santa Cecilia durante \textit{EMUFest 2017}. L'utilizzo di più tecniche sovrapposte, come in figura ..., rende possibile un'assimilazione veloce del gesto e una chiarezza di linguaggio. Così ho sfruttato tali insegnamenti per provare a sommare più simboli per arrivare ad un timbro complesso.
 
 Ho congiunto le varie forme ritmiche con delle parti di soundscape creato grazie a un tremolo lento sulle molle più grandi o a leggeri passaggi di archetto, come si nota nella III parte della composizione. Tali macchie di suono, rendono possibile, nella II parte, lo sviluppo di un continuum, che si manifesta in lontananza per riaffiorare in alcuni punti, decadendo poi velocemente, seguito da vertiginose corse delle dita sulle molle.
 
@@ -207,6 +207,18 @@ Tecniche di sintesi utilizzate:
 \item{Filtro Risonante}
 	\end{itemize}
 
+\includepdf[offset=-10 0,
+		    scale=.80,
+		    pagecommand={
+		    	\begin{tikzpicture}[
+					remember picture,
+					overlay]
+		    	\node [xshift=10cm,yshift=1cm] at (current page.south west) {\color{white}{}};
+				\end{tikzpicture}}
+		    ]{Algoritmica.pdf}
+
+\clearpage
+
 \section{Pedaliera}
 
-Pedaliera. Dopo aver studiato il funzionamento ho notato che ogni pulsante numerato era assegnato ad un NOTE on, come una normalissima pedaliera midi per organo. La fortuna è che ogni pulsante equivale a note inerenti al numero presente sulla pedaliera (es. note-on 1 = tasto 1 pedaliera). Quindi essendo identiche, ho solo dovuto trasformare ogni note-on in un "lancio-scena" sul mio software di utilizzo (max-msp). Questo mi ha facilitato lo studio con il performer che può riprovare ogni scena senza dover ripetere temporalmente le varie scene per forza in  sequenza temporale, ovvero può passare ad esempio dalla scena 1 alla scena 6 senza dover ripercorrere tutte le scene presenti tra quelle menzionate. Questo facilita la prova per ogni singolo rigo.
+Dopo aver studiato il funzionamento della pedaliera, ho notato che ogni pulsante numerato era assegnato ad un NOTE on, come una normalissima pedaliera midi per organo. La fortuna è che ogni pulsante equivale a note inerenti al numero presente sulla pedaliera (es. note-on 1 = tasto 1 pedaliera). Quindi essendo identiche, ho solo dovuto trasformare ogni note-on in un "lancio-scena" sul mio software di utilizzo (max-msp). Questo mi ha facilitato lo studio con il performer che poteva riprovare ogni scena senza doverle ripetere in sequenza temporale: ovvero poteva passare dalla scena 1 alla scena 6 senza dover ripercorrere tutte le scene presenti tra quelle menzionate. Questo ha facilitato di gran lunga le prove fatte per ogni singolo rigo.
