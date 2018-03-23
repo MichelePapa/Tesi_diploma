@@ -10,8 +10,9 @@
                numbers=noenddot,
                cleardoublepage=empty,
                tablecaptionabove,
-               twoside,
-               openright
+               %twoside,
+               %openright,
+               openany
                ]{scrreprt}
 
 \usepackage[T1]{fontenc}
@@ -29,7 +30,7 @@
 \usepackage[style=philosophy-modern,
             hyperref
             ]{biblatex}
-
+            
 \usepackage{chngpage}
 
 \usepackage{calc}
@@ -71,6 +72,12 @@
 
 \linespread{1.1}
 
+\usepackage{tikz}
+
+\usepackage{color}
+
+\usepackage{pdfpages}  
+
 %-----------------------------------------------------------------------
 %----------------------------------------------------------- documento -
 %-----------------------------------------------------------------------
@@ -83,12 +90,28 @@
 
 \input{FrontBackMatter/Titlepage}
 
-\begin{figure}
-        \centering
-        \includegraphics{spire.jpg}
-        \caption{Particolare dell'opera \textit{Sp.I.R.E.} - Foto scattata in Aula Bianchini, Conservatorio Santa Cecilia, Roma. 2018}
-   \end{figure}
+%\begin{figure}
+%        \centering
+%        \includegraphics{spire.jpg}
+%        \caption{Particolare dell'opera \textit{Sp.I.R.E.} - Foto scattata in Aula Bianchini, Conservatorio Santa Cecilia, Roma. 2018}
+%   \end{figure}
 
+\clearpage
+
+\thispagestyle{empty}
+
+\includepdf[offset=-80 0,
+		    scale=1.43,
+		    pagecommand={
+		    	\begin{tikzpicture}[
+					remember picture,
+					overlay]
+		    	\node [xshift=10cm,yshift=1cm] at (current page.south west) {\color{white}{
+			Particolare dell'opera \textit{Sp.I.R.E.} - Foto scattata in Aula Bianchini, Conservatorio Santa Cecilia, Roma. 2018}};
+				\end{tikzpicture}}
+		    ]{spire.pdf}
+
+\clearpage
 
 \cleardoublepage
 
