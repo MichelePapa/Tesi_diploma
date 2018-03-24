@@ -1,0 +1,160 @@
+%!TEX TS-program = pdflatex
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = 2018-03-26-papa-vitres-de-son_solofronte.tex
+
+\documentclass[a4paper,
+		       titlepage,
+               headinclude,
+               footinclude,
+               BCOR5mm,
+               numbers=noenddot,
+               cleardoublepage=empty,
+               tablecaptionabove,
+               %twoside,
+               %openright,
+               openany
+               ]{scrreprt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[english,
+            italian
+            ]{babel}
+            
+\usepackage{amsmath,
+		    amssymb}
+
+\usepackage{indentfirst}
+
+\usepackage[style=philosophy-modern,
+            hyperref
+            ]{biblatex}
+            
+\usepackage{chngpage}
+
+\usepackage{calc}
+
+\usepackage{listings}
+
+\usepackage{graphicx}
+
+\usepackage{subfig}
+
+\usepackage{lipsum}
+
+\usepackage{shapepar}
+
+\usepackage{pifont}
+
+\usepackage[eulerchapternumbers,
+            subfig,
+            beramono,
+            eulermath,
+            pdfspacing,
+            listings,
+            dottedtoc
+            ]{classicthesis}
+
+\usepackage{arsclassica}
+
+\input{arsclassica-settings}
+
+%-----------------------------------------------------------------------
+%--------------------------------------------------- personalizzazioni -
+%-----------------------------------------------------------------------
+
+\usepackage{epigraph}
+
+\usepackage{floatflt}
+
+\usepackage{epsfig}
+
+\usepackage{setspace}
+
+%\linespread{1.1}
+
+\usepackage{tikz}
+
+\usepackage{color}
+
+\usepackage{pdfpages} 
+
+\usepackage{wrapfig} 
+
+\usepackage{multirow}
+
+%-----------------------------------------------------------------------
+%----------------------------------------------------------- documento -
+%-----------------------------------------------------------------------
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\pagestyle{plain}
+
+\input{FrontBackMatter/Titlepage}
+
+%\begin{figure}
+%        \centering
+%        \includegraphics{spire.jpg}
+%        \caption{Particolare dell'opera \textit{Sp.I.R.E.} - Foto scattata in Aula Bianchini, Conservatorio Santa Cecilia, Roma. 2018}
+%   \end{figure}
+
+\clearpage
+
+\thispagestyle{empty}
+
+\includepdf[offset=-80 0,
+		    scale=1.43,
+		    pagecommand={
+		    	\begin{tikzpicture}[
+					remember picture,
+					overlay]
+		    	\node [xshift=10cm,yshift=1cm] at (current page.south west) {\color{white}{
+			Particolare dell'opera \textit{Sp.I.R.E.} - Foto scattata in Aula Bianchini, Conservatorio Santa Cecilia, Roma. 2018}};
+				\end{tikzpicture}}
+		    ]{spire.pdf}
+
+\clearpage
+
+\cleardoublepage
+
+\pagestyle{scrheadings}
+
+\input{FrontBackMatter/Contents}
+
+\cleardoublepage
+
+\doublespacing
+
+\pagenumbering{roman}
+
+\input{FrontBackMatter/Introduzione}
+
+\pagenumbering{arabic}
+
+\input{Chapters/Capitolo01}
+
+\input{Chapters/Capitolo02}
+
+\input{Chapters/Capitolo03}
+
+\input{Chapters/Capitolo04}
+
+\input{Chapters/Capitolo05}
+
+\input{Chapters/Capitolo06}
+
+\input{Chapters/Capitolo07}
+
+\input{Chapters/Capitolo08}
+
+\input{Chapters/Capitolo09}
+
+\clearpage
+
+\input{FrontBackMatter/Bibliography}
+
+\end{document}
